@@ -12,7 +12,7 @@ class Producto extends BaseController
     }
 
     public function registrar(){
-      $producto=$this->request->getPost("producto");
+      $nombre=$this->request->getPost("nombre");
       $foto=$this->request->getPost("foto");
       $precio=$this->request->getPost("precio");
       $descripcion=$this->request->getPost("descripcion");
@@ -28,7 +28,7 @@ class Producto extends BaseController
           //armo el paquete de datos  a registrar
 
           $datos=array(
-            "nombre"=>$producto,
+            "nombre"=>$nombre,
             "foto"=>$foto,
             "precio"=>$precio,
             "descripcion"=>$descripcion,
@@ -113,7 +113,7 @@ class Producto extends BaseController
 
     public function editar($id){
      
-      $producto=$this->request->getPost("producto");
+      $producto=$this->request->getPost("nombre");
        $precio=$this->request->getPost("precio");
 
        if($this->validate('formularioEditar')){

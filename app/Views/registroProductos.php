@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control"  name="producto" placeholder="producto: ">
+                    <input type="text" class="form-control"  name="nombre" placeholder="producto: ">
                       <label for="floatingInput">productos</label>
                 </div>
                     <div class="form-floating mb-3">

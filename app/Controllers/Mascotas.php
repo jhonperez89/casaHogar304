@@ -12,10 +12,9 @@ class Mascotas extends BaseController
     }
     public function registrar(){
         
-        $mascota=$this->request->getPost("mascota");
+        $nombre=$this->request->getPost("nombre");
         $foto=$this->request->getPost("foto");
         $edad=$this->request->getPost("edad");
-        $raza=$this->request->getPost("raza");
         $descripcion=$this->request->getPost("descripcion");
         $tipo=$this->request->getPost("tipo");
 
@@ -23,18 +22,21 @@ class Mascotas extends BaseController
         if ($this->validate('formularioMascota')) {
             
             try {
+
+              $modelo=new MascotasModelo();
             
               $datos=array(
-                "nombre"=>$mascota,
+                "nombre"=>$nombre,
                 "foto"=>$foto,
-                "raza"=>$raza,
+                "edad"=>$edad,
                 "descripcion"=>$descripcion,
                 "tipo"=>$tipo
             );
 
-            $modelo= new MascotasModelo();
+            
             $modelo->insert($datos);
-            $mensaje = "Exito agregando el producto ";
+
+            $mensaje = "Exito agregando mascota ";
             return redirect()->to(site_url('/mascotas/registros'))->with('mensaje',$mensaje);
   
 
@@ -42,10 +44,12 @@ class Mascotas extends BaseController
                
             } catch (\Exception $error) {
               $mensaje=$error->getMessage();
-               echo("error");
+              return redirect()->to(site_url('/mascotas/registros'))->with('mensaje',$mensaje);
             }
+
         }else{
-          echo("datos sin llenar");
+          $mensaje=("campos sin llenar");
+          return redirect()->to(site_url('/mascotas/registros'))->with('mensaje',$mensaje);
         }
    
 
@@ -77,8 +81,8 @@ class Mascotas extends BaseController
 
         $modelo->where('id',$id)->delete();
 
-        $mensaje ="Exito eliminando el producto";
-          return redirect()->to(site_url('/productos/registros'))->with('mensaje',$mensaje);
+        $mensaje ="Exito eliminando el Registro";
+          return redirect()->to(site_url('/mascotas/registros'))->with('mensaje',$mensaje);
 
       }catch(\Exception $error){
         $mensaje=$error->getMessage();
@@ -89,9 +93,9 @@ class Mascotas extends BaseController
 
     public function editar($id){
       
-      
+      $nombre=$this->request->getPost("nombre");
       $edad=$this->request->getPost("edad");
-      $raza=$this->request->getPost("raza");
+      
 
       if($this->validate('formEditarMascota')){
         //intentar conectarme a la bd e insertar datos
@@ -104,7 +108,7 @@ class Mascotas extends BaseController
           $datos=array(
             
             "edad"=>$edad,
-            "raza"=>$raza,
+            "nombre"=>$nombre,
             
         );
 

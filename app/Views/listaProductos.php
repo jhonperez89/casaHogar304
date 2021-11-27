@@ -54,12 +54,12 @@
                         <div class="card h-100 p-3" ">
                             <img src="<?= $producto["foto"] ?>" class="card-img-top h-100" alt="foto">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $producto["producto"] ?></h5>
+                                    <h5 class="card-title"><?= $producto["nombre"] ?></h5>
                                     <p class="card-text"><?= $producto["precio"] ?></p>
                                     <a data-bs-toggle="modal" data-bs-target="#confirmacion<?= $producto["id"] ?>" href="#" class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
                                     <a data-bs-toggle="modal" data-bs-target="#editar<?= $producto["id"] ?>" href="#" class="btn btn-primary"><i class="far fa-edit"></i></a>
                                 </div>
-                            </div>
+                          </div>
 
                            <section>
                            <div class="modal fade" id="confirmacion<?= $producto["id"] ?>">
@@ -98,7 +98,7 @@
                                        <form action="<?= site_url('/productos/editar/'.$producto["id"])?>" method="POST">
 
                                        <div class="form-floating mb-3">
-                                            <input type="text" class="form-control"  name="producto" placeholder="producto: " value="<?= $producto["producto"] ?>">
+                                            <input type="text" class="form-control"  name="nombre" placeholder="producto: " value="<?= $producto["nombre"] ?>">
                                             <label for="floatingInput">productos</label>
                                         </div>
                                         <div class="form-floating mb-3">

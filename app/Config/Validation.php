@@ -38,7 +38,7 @@ class Validation
     ];
 
     public $formularioProducto=[
-    'producto'=>'required',
+    'nombre'=>'required',
     'foto'=>'required',
     'precio'=>'required',
     'descripcion'=>'required',
@@ -48,24 +48,24 @@ class Validation
 
     public $formularioEditar=[
 
-        'producto'=>'required',
+        'nombre'=>'required',
         'precio'=>'required'
         
     
         ];
 
     public $formularioMascota=[
-        'mascota'=>'required',
+        'nombre'=>'required',
         'foto'=>'required',
-        'raza'=>'required',
+        'edad'=>'required',
         'descripcion'=>'required',
         'tipo'=>'required'
     
         ];
 
         public $formEditarMascota=[
-            'mascota'=>'required',
-            'raza'=>'required'
+            'nombre'=>'required',
+            'edad'=>'required'
             
         
             ];    

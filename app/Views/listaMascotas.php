@@ -49,10 +49,11 @@
   <div class="container">
     <div class="row row-cols-1 row-cols-md-5 g-4">
       <?php foreach($mascotas as $mascota):?>
-        <div class="card" ">
+        <div class="col mt-50">
+        <div class="card h-100 p-3">
           <img src="<?= $mascota["foto"] ?>" class="card-img-top h-100" alt="foto">
           
-          <div class="card-body">
+          <div class="card-body ">
             <h5 class="card-title"><?= $mascota["nombre"] ?></h5>
             <p class="card-text"><?= $mascota["edad"] ?></p>
             <a data-bs-toggle="modal" data-bs-target="#confirmacion<?= $mascota["id"] ?>" href="#" class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
@@ -64,14 +65,15 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header fondoPrincipal text-white">
-                    <h5 class="modal-title" >Modal title</h5>
+                    <h5 class="modal-title" >Eliminar Registro</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                       </button>
                   </div>
                   <div class="modal-body">
                     <p>¿Esta seguro de eliminar este registro?</p>
-                    <p><?= $animales["id"] ?></p>
+                    <p><?= $mascota["id"] ?></p>
                   </div>
+        </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <a href="<?= site_url('/mascotas/eliminar/'.$mascota["id"])?> " class="btn btn-danger">Aceptar</a>
@@ -91,7 +93,7 @@
                   </div>
                 <div class="modal-body">
                   <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 aling-self-center">
                       <img src="<?= $mascota["foto"] ?>" alt="foto" class="img-fluid w-100">
                     </div>
                     <div class="col-9">

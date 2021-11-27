@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= base_url('public/styles/estilos.css') ?>">
-	<title>Animalandia</title>
+	<title>Animal</title>
+  
 
 </head>
 <body style="background-color:#9E9AC7;">

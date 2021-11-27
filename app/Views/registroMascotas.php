@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control"  name="mascota" placeholder="producto: ">
+                    <input type="text" class="form-control"  name="nombre" placeholder="Nombre: ">
                       <label for="floatingInput">Nombre</label>
                 </div>
                     <div class="form-floating mb-3">
@@ -55,7 +55,7 @@
                         <label for="floatingPassword">Fotografia</label>
                     </div>
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="raza" placeholder="precio unidad">
+                        <input type="text" class="form-control" name="edad" placeholder="edad">
                        <label for="floatingPassword">edad</label>
                       </div>
                         <div class="form-floatin mb-3">
@@ -212,7 +212,7 @@
   <div class="modal fade" id="modal" >
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header fondoPrincipal text- white">
+      <div class="modal-header fondoPrincipal ">
         <h5 class="modal-title" >Casa Hogar</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -228,7 +228,7 @@
 </section>
    
 
-
+<script type="module" src="<?=base_url('public/js/lanzarmodal.js') ?>"> </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/3675f85246.js" crossorigin="anonymous"></script>
